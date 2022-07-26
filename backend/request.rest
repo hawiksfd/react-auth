@@ -1,0 +1,40 @@
+//create user baru
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Muna tess",
+    "email": "munatess@gmail.com",
+    "password": "munatess123",
+    "confPassword": "munatess123",
+    "role": "user"
+}
+
+####################################################################
+
+//get semua user
+GET http://localhost:5000/users
+
+####################################################################
+
+//get 1 user
+GET http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
+
+####################################################################
+
+//update user
+PATCH  http://localhost:5000/users/1e8ba75b-b119-492c-aeb8-5cf2a20ce107
+Content-Type: application/json
+
+{
+    "name": "Muna update",
+    "email": "munatess@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+####################################################################
+
+//delete user
+DELETE http://localhost:5000/users/1e8ba75b-b119-492c-aeb8-5cf2a20ce107
