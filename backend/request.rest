@@ -3,10 +3,10 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Muna tess",
-    "email": "munatess@gmail.com",
-    "password": "munatess123",
-    "confPassword": "munatess123",
+    "name": "Agus tes",
+    "email": "agustes@gmail.com",
+    "password": "agustes123",
+    "confPassword": "agustes123",
     "role": "user"
 }
 
@@ -23,15 +23,15 @@ GET http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
 ####################################################################
 
 //update user
-PATCH  http://localhost:5000/users/1e8ba75b-b119-492c-aeb8-5cf2a20ce107
+PATCH  http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
 Content-Type: application/json
 
 {
-    "name": "Muna update",
-    "email": "munatess@gmail.com",
+    "name": "Niam   tes",
+    "email": "niamtes@gmail.com",
     "password": "",
     "confPassword": "",
-    "role": "user"
+    "role": "admin"
 }
 
 ####################################################################
