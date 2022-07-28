@@ -27,10 +27,10 @@ PATCH  http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
 Content-Type: application/json
 
 {
-    "name": "Niam   tes",
+    "name": "Niam tes",
     "email": "niamtes@gmail.com",
-    "password": "",
-    "confPassword": "",
+    "password": "niam123",
+    "confPassword": "niam123",
     "role": "admin"
 }
 
@@ -38,3 +38,27 @@ Content-Type: application/json
 
 //delete user
 DELETE http://localhost:5000/users/1e8ba75b-b119-492c-aeb8-5cf2a20ce107
+
+
+####################################################################
+
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "niamtes@gmail.com",
+    "password": "niam123"
+}
+
+####################################################################
+
+//profil me
+GET http://localhost:5000/me
+Content-Type: application/json
+
+####################################################################
+
+//logout user
+DELETE  http://localhost:5000/logout
+Content-Type: application/json

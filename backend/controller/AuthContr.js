@@ -17,7 +17,7 @@ export const Login = async (req, res) => {
     const name = user.name;
     const email = user.email;
     const role = user.role;
-    req.status(200).json({ uuid, name, email, role }); //parsing data user
+    res.status(200).json({ uuid, name, email, role }); //parsing data user
 }
 
 export const Me = async (req, res) => {
