@@ -21,13 +21,6 @@ const Products = db.define('product', {
             len: [3, 100]
         }
     },
-    role: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true
-        }
-    },
     price: {
         type: DataTypes.INTEGER,
         allowNull: false,

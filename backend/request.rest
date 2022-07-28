@@ -1,64 +1,104 @@
-//create user baru
+// login USER
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "muna@gmail.com",
+    "password": "muna123"
+}
+
+####################################################################
+
+// profil me
+GET http://localhost:5000/me
+
+####################################################################
+
+// logout USER
+DELETE  http://localhost:5000/logout
+
+
+################################################################################################################################################
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+################################################################################################################################################
+
+
+// create USER baru
 POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Agus tes",
-    "email": "agustes@gmail.com",
-    "password": "agustes123",
-    "confPassword": "agustes123",
+    "name": "teguh",
+    "email": "teguh@gmail.com",
+    "password": "teguh123",
+    "confPassword": "teguh123",
     "role": "user"
 }
 
 ####################################################################
 
-//get semua user
+
+// update USER
+PATCH  http://localhost:5000/users/b106a1f7-f1e7-4636-8435-d5e1c34a1d1b
+Content-Type: application/json
+
+{
+    "name": "muna updated",
+    "email": "muna@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+####################################################################
+
+// delete USER
+DELETE http://localhost:5000/users/b106a1f7-f1e7-4636-8435-d5e1c34a1d1b
+
+// get semua USER
 GET http://localhost:5000/users
 
 ####################################################################
 
-//get 1 user
-GET http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
+// get 1 USER
+GET http://localhost:5000/users/b106a1f7-f1e7-4636-8435-d5e1c34a1d1b
 
-####################################################################
 
-//update user
-PATCH  http://localhost:5000/users/2174cfa3-888a-40e5-88c8-90e712739136
+################################################################################################################################################
+//--------------------------------------------------------------------------------------------------------------------------------------------//
+################################################################################################################################################
+
+
+// create data PRODUCT baru
+POST http://localhost:5000/product
 Content-Type: application/json
 
 {
-    "name": "Niam tes",
-    "email": "niamtes@gmail.com",
-    "password": "niam123",
-    "confPassword": "niam123",
-    "role": "admin"
+    "name": "produk muna 2",
+    "price": 2222
 }
 
 ####################################################################
 
-//delete user
-DELETE http://localhost:5000/users/1e8ba75b-b119-492c-aeb8-5cf2a20ce107
-
-
-####################################################################
-
-//login user
-POST http://localhost:5000/login
+PATCH  http://localhost:5000/product/
 Content-Type: application/json
 
 {
-    "email": "niamtes@gmail.com",
-    "password": "niam123"
+    "name": "produk niam 1 updated",
+    "price": 11111
 }
 
 ####################################################################
 
-//profil me
-GET http://localhost:5000/me
-Content-Type: application/json
+// delete PRODUCT
+DELETE http://localhost:5000/product/
 
 ####################################################################
 
-//logout user
-DELETE  http://localhost:5000/logout
-Content-Type: application/json
+// get all PRODUCT
+GET http://localhost:5000/product
+
+####################################################################
+
+// get 1 PRODUCT
+GET http://localhost:5000/product/
