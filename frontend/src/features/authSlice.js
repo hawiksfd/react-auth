@@ -11,14 +11,14 @@ const initialState = {
 
 export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAPI) => {
     try {
-        const respone = await axios.post('http://localhost/5000/login', {
+        const response = await axios.post('http://localhost:5000/login', {
             email: user.email,
             password: user.password
         });
-        return respone.data;
+        return response.data;;
     } catch (error) {
-        if (error.respone) {
-            const message = error.respone.data.msg;
+        if (error.response) {
+            const message = error.response.data.msg;
             return thunkAPI.rejectWithValue(message);
         }
     }
@@ -47,5 +47,5 @@ export const authSlice = createSlice({
     }
 })
 
-export const { reset } = authSlice.action;
+export const { reset } = authSlice.actions;
 export default authSlice.reducers;
