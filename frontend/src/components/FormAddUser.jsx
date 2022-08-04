@@ -95,6 +95,7 @@ const FormAddUser = () => {
                                             value={role}
                                             onChange={(e) => setRole(e.target.value)}
                                         >
+                                            <option value="" selected disabled hidden >--- Select Role ---</option>
                                             <option value="admin">Admin</option>
                                             <option value="user">User</option>
                                         </select>
