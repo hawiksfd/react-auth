@@ -14,7 +14,10 @@ const Userlist = () => {
         setUsers(response.data);
     }
 
-
+    const deleteUser = async (userId) => {
+        await axios.delete(`http://localhost:5000/users/${userId}`);
+        getUsers();
+    }
 
     return (
         <div>
@@ -40,7 +43,9 @@ const Userlist = () => {
                             <td>{users.email}</td>
                             <td>{users.role}</td>
                             <td>
-
+                                <button onClick={() => deleteUser(users.uuid)} className="button is-small is-danger">
+                                    Delete
+                                </button>
                             </td>
                         </tr>
                     ))}
