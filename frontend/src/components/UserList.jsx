@@ -43,6 +43,9 @@ const Userlist = () => {
                             <td>{users.email}</td>
                             <td>{users.role}</td>
                             <td>
+                                <Link to={`/users/edit/${users.uuid}`} className="button is-small is-info">
+                                    Edit
+                                </Link>
                                 <button onClick={() => deleteUser(users.uuid)} className="button is-small is-danger">
                                     Delete
                                 </button>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
+
 const FormEditProduct = () => {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
