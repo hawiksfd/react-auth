@@ -43,6 +43,12 @@ const ProductList = () => {
                             <td>{products.price}</td>
                             <td>{products.user.name}</td>
                             <td>
+                                {/* <Link to={`/products/edit/${products.uuid}`} className="button is-small is-info">
+                                    Edit
+                                </Link> */}
+                                <button onClick={() => deleteProduct(products.uuid)} className="button is-small is-danger">
+                                    Delete
+                                </button>
                             </td>
                         </tr>
                     ))}
