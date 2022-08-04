@@ -14,14 +14,14 @@ const Login = () => {
 
     useEffect(() => {
         if (user || isSuccess) {
-            navigate("/dashboard");
+            navigate("/dashboard");                         // redirect
         }
-        dispatch(reset());
-    }, [user, isSuccess, dispatch, navigate]);
+        dispatch(reset());                                  // reset state
+    }, [user, isSuccess, dispatch, navigate]);              // depedency 
 
     const Auth = (e) => {
-        e.preventDefault();
-        dispatch(LoginUser({ email, password }));
+        e.preventDefault();                                 // agar ketika submit page tidak reload
+        dispatch(LoginUser({ email, password }));           // dispatch login user
     }
 
     return (

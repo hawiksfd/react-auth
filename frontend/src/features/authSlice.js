@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
     user: null,
@@ -15,14 +15,14 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
             email: user.email,
             password: user.password
         });
-        return response.data;;
+        return response.data;
     } catch (error) {
         if (error.response) {
             const message = error.response.data.msg;
             return thunkAPI.rejectWithValue(message);
         }
     }
-})
+});
 
 export const authSlice = createSlice({
     name: "auth",
@@ -45,7 +45,7 @@ export const authSlice = createSlice({
             state.message = action.payload;
         })
     }
-})
+});
 
 export const { reset } = authSlice.actions;
-export default authSlice.reducers;
+export default authSlice.reducer;
